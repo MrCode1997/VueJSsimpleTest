@@ -13,9 +13,11 @@
 
     import List from '@/components/List'
     import MiniNotification from "../components/MiniNotification";
+    import ToDo from '@/modules/todo'
 
     export default {
         components : { List , MiniNotification },
+        mixins : [ ToDo ],
         data () {
             return {
                 lista : [
