@@ -33,17 +33,17 @@
         },
         methods : {
             init () {
-
+              console.log("Hello from component");
             },
             insertNew () {
-                if ( this.updateItem !== null ) {
-                  this.update();
-                  return;
-                }
-                this.lista.push(this.newItem);
-                this.newItem = null;
-                this.notifyitI = true;
-                setTimeout( () => {this.notifyitI = false } , 1500 );
+              if ( this.updateItem !== null ) {
+                this.update();
+                return;
+              }
+              this.lista.push(this.newItem);
+              this.newItem = null;
+              this.notifyitI = true;
+              setTimeout( () => {this.notifyitI = false } , 1500 );
             },
             deleteItem ( idx ) {
                 this.lista.splice(idx , 1);
